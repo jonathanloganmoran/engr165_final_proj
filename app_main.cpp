@@ -7,6 +7,7 @@
 #include <GLUT/glut.h>
 #else
 #include <GL/freeglut.h>
+#include "Point.h"
 #endif
 
 
@@ -15,28 +16,11 @@ using namespace std;
 // Some global variables to maintain state
 
 // A point data structure
-struct Point {
-	// The coordinates of the point
-	float x;
-	float y;
 
-	// The color of the point
-	float r;
-	float g;
-	float b;
+// A "Double Ended QUEue" to store points
+//Point* p;
 
-	// A constructor for point
-	Point(float x, float y, float r, float g, float b) {
-		this->x = x;
-		this->y = y;
-		this->r = r;
-		this->g = g;
-		this->b = b;
-	}
-};
-
-// A "Double Ended QUEue" to store points 
-deque<Point> points;
+//deque<Point*> points;
 
 // Variables to store current color, initialize to black
 float red = 0.0, green = 0.0, blue = 0.0;
@@ -74,23 +58,23 @@ void appDrawScene() {
 
 
 	// Draw all the points stored in the double-ended queue
-	for (int i = 0; i < points.size(); i++) {
+	//for (int i = 0; i < points.size(); i++) {
 
 		// Set the vertex color to be whatever we stored in the point
-		glColor3f(points[i].r, points[i].g, points[i].b);
+//		glColor3f(points[i].r, points[i].g, points[i].b);
 
-		glBegin(GL_POINTS);
+//		glBegin(GL_POINTS);
 
 		// Draw the vertex in the right position
-		glVertex2f(points[i].x, points[i].y);
+//		glVertex2f(points[i].x, points[i].y);
 
-		glEnd();
-	}
+//		glEnd();
+//	}
 
 	// We have been drawing everything to the back buffer
 	// Swap the buffers to see the result of what we drew
-	glFlush();
-	glutSwapBuffers();
+//	glFlush();
+//	glutSwapBuffers();
 }
 
 //-------------------------------------------------------
@@ -176,7 +160,7 @@ void appMouseFunc(int b, int s, int x, int y) {
 
 	// Add a point with with coordinates matching the
 	// current mouse position, and the current color values
-	points.push_front(Point(mx, my, red, green, blue));
+//	points.push_front(Point(mx, my, red, green, blue));
 
 	// Redraw the scene by calling appDrawScene above
 	// so that the point we added above will get painted
@@ -198,7 +182,7 @@ void appMotionFunc(int x, int y) {
 
 	// Similar behavior to click handler. This function
 	// allows us to paint free hand with the mouse.
-	points.push_front(Point(mx, my, red, green, blue));
+	(*p).push_front(Point(mx, my, red, green, blue));
 
 	// Again, we redraw the scene
 	glutPostRedisplay();
@@ -216,7 +200,7 @@ void appKeyboardFunc(unsigned char key, int x, int y) {
 	switch (key) {
 		// Space was pressed. Erase all points
 	case ' ':
-		points.clear();
+		(*p)->clear();
 		break;
 
 		// Escape was pressed. Quit the program
