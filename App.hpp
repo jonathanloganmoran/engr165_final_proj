@@ -32,4 +32,5 @@ public:
     void mouseDown(float x, float y);
     void mouseDrag(float x, float y);
 };
+
 #endif /* App_hpp */

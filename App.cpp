@@ -9,6 +9,8 @@
 #include "App.hpp"
 #include "Point.h"
 #include "GlutApp.h"
+#include "freeglut/freeglut.h"
+#include "Whiteboard.hpp"
 #include <deque>
 
 using namespace std;
@@ -44,7 +46,7 @@ void App::draw() {
     glutSwapBuffers();
 }
 
-void App::mouseDown(float x, float y){
+void App::mouseDown(float x, float y) {
     // Update app state
     mx = x;
     my = y;

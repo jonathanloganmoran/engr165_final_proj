@@ -20,9 +20,12 @@ public:
     Point(float x, float y, float r, float g, float b);
     
     virtual void draw() const;
-    void app_main::appMotionFunc();
+    void 
     
     void handle(float x, float y);
+    void keyPress(unsigned char key);
+    void mouseDown(float x, float y);
+    void mouseDrag(float , float y);
     
     ~Point();
 };

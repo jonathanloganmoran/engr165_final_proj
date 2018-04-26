@@ -14,6 +14,8 @@
 
 using namespace std;
 
+Whiteboard *board;
+
 Point::Point(float x, float y, float r, float g, float b) {
     this->x = x;
     this->y = y;
@@ -22,6 +24,11 @@ Point::Point(float x, float y, float r, float g, float b) {
     this->b = b;
 }
 
+void handle(float x, float y) {
+    
+    
+    
+}
 void Point::draw() const {
     glColor3f(r, g, b);
     glBegin(GL_POINTS);
