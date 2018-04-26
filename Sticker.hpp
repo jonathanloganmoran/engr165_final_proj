@@ -10,5 +10,18 @@
 #define Sticker_hpp
 
 #include <stdio.h>
+#include "Point.h"
+
+class Sticker : Point {
+    bool isSelected;        // to determine if Sticker tool is selected
+
+public:
+    Sticker() : Point(this->x, this->y) {
+    }           // need get/set methods for Point() instances
+    
+    Sticker() : Point(this->x, this->y, this->r, this->g, this->b) {
+                // Sticker with custom color (via set/get methods)
+    }
+};
 
 #endif /* Sticker_hpp */
