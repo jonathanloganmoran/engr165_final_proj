@@ -19,8 +19,8 @@ using namespace std;
 class Whiteboard {
     
     Whiteboard *w;
-    deque<Point*> points;           // already implemented: need functioning methods to add/retreive from deque
-    deque<Sticker*> stickers;       // to be implemented: need sticker base class
+    deque<Point*> points;
+    deque<Sticker*> stickers;
 
 public:
     

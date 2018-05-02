@@ -11,7 +11,7 @@
 #endif
 
 
-class Point {
+struct Point {
     // The coordinates of the point
     float x;
     float y;
@@ -21,7 +21,7 @@ class Point {
     float g;
     float b;
     
-public:
+//public:
     Point ();
     // A constructor for point
     Point(float x, float y, float r, float g, float b);
