@@ -12,7 +12,4 @@
 // to be implemented
 // will inherit Point base class, which has variables x, y, r, g and b
 
-class Sticker : public Point {
-    
-    
-};
+

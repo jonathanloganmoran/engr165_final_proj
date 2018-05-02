@@ -6,11 +6,11 @@
 //  Copyright © 2018 Angelo Kyrilov. All rights reserved.
 //
 
-#include "App.hpp"
-#include "Point.h"
-#include "GlutApp.h"
-#include "freeglut/freeglut.h"
-#include "Whiteboard.hpp"
+#include "App.h"
+//#include "Point.h"
+//#include "GlutApp.h"
+//#include "freeglut/freeglut.h"
+//#include "Whiteboard.hpp"
 #include <deque>
 
 using namespace std;
@@ -51,7 +51,7 @@ void App::mouseDown(float x, float y) {
     mx = x;
     my = y;
     
-    Point::handle(x, y);
+    //Point::handle(x, y);
     
     // Redraw the scene
     redraw();

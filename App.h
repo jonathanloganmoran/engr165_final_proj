@@ -10,11 +10,11 @@
 #define App_hpp
 
 #include <stdio.h>
-#include "app_main.cpp"
-#include "glutapp"
-#include <GL/glutapp.h>
+//#include "app_main.cpp"
+//#include "glutapp"
+//#include <GL/glutapp.h>
 #include "GlutApp.h"
-#include <GL/freeglut.h>
+//#include <GL/freeglut.h>
 #include <deque>
 
 class App: public GlutApp {

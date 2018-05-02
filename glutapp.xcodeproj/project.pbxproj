@@ -10,11 +10,11 @@
 		173FEF0C1AA63AC4006CCB85 /* app_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173FEF0B1AA63AC4006CCB85 /* app_main.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		173FEF161AA63B1B006CCB85 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173FEF151AA63B1B006CCB85 /* OpenGL.framework */; };
 		173FEF181AA63B22006CCB85 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173FEF171AA63B22006CCB85 /* GLUT.framework */; };
-		F2CCF7392091127E00D2BD0A /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF7372091127E00D2BD0A /* Point.cpp */; };
-		F2CCF73C20911A2900D2BD0A /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF73A20911A2900D2BD0A /* App.cpp */; };
-		F2CCF73F20911F5100D2BD0A /* GlutApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF73E20911F5100D2BD0A /* GlutApp.cpp */; };
-		F2CCF7422091206100D2BD0A /* Whiteboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF7402091206100D2BD0A /* Whiteboard.cpp */; };
-		F2CCF74520912AC000D2BD0A /* Sticker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF74320912AC000D2BD0A /* Sticker.cpp */; };
+		F2CCF7392091127E00D2BD0A /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF7372091127E00D2BD0A /* Point.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		F2CCF73C20911A2900D2BD0A /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF73A20911A2900D2BD0A /* App.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		F2CCF73F20911F5100D2BD0A /* GlutApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF73E20911F5100D2BD0A /* GlutApp.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		F2CCF7422091206100D2BD0A /* Whiteboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF7402091206100D2BD0A /* Whiteboard.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		F2CCF74520912AC000D2BD0A /* Sticker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF74320912AC000D2BD0A /* Sticker.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,7 +37,7 @@
 		F2CCF7372091127E00D2BD0A /* Point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
 		F2CCF7382091127E00D2BD0A /* Point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = SOURCE_ROOT; };
 		F2CCF73A20911A2900D2BD0A /* App.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
-		F2CCF73B20911A2900D2BD0A /* App.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = App.hpp; sourceTree = "<group>"; };
+		F2CCF73B20911A2900D2BD0A /* App.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
 		F2CCF73D20911F5100D2BD0A /* GlutApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlutApp.h; sourceTree = "<group>"; };
 		F2CCF73E20911F5100D2BD0A /* GlutApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GlutApp.cpp; sourceTree = "<group>"; };
 		F2CCF7402091206100D2BD0A /* Whiteboard.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Whiteboard.cpp; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 				F2CCF73E20911F5100D2BD0A /* GlutApp.cpp */,
 				F2CCF73D20911F5100D2BD0A /* GlutApp.h */,
 				F2CCF73A20911A2900D2BD0A /* App.cpp */,
-				F2CCF73B20911A2900D2BD0A /* App.hpp */,
+				F2CCF73B20911A2900D2BD0A /* App.h */,
 				F2CCF7372091127E00D2BD0A /* Point.cpp */,
 				F2CCF7382091127E00D2BD0A /* Point.h */,
 				173FEF171AA63B22006CCB85 /* GLUT.framework */,

@@ -10,7 +10,9 @@
 #define Whiteboard_hpp
 
 #include <stdio.h>
+#include <deque>
 #include "Point.h"
+#include "Sticker.hpp"
 
 using namespace std;
 
@@ -26,7 +28,6 @@ public:
     
     void handle(float x, float y);
     void draw();
-    void handle(float x, float y);
     
     ~Whiteboard();
 };

@@ -16,10 +16,11 @@ class Sticker : Point {
     bool isSelected;        // to determine if Sticker tool is selected
 
 public:
-    Sticker() : Point(this->x, this->y) {
+    Sticker() : Point() {
+        
     }           // need get/set methods for Point() instances
     
-    Sticker() : Point(this->x, this->y, this->r, this->g, this->b) {
+    Sticker(float x, float y, float r, float g, float b) : Point(x, y, r, g, b) {
                 // Sticker with custom color (via set/get methods)
     }
 };
