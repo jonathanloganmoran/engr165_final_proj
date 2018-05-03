@@ -16,18 +16,6 @@ Whiteboard::Whiteboard() {
     deque<Point*> points;
 }
 
-//void GlutApp::mouseDown(float x, float y){
-//    // Update app state
-//    mx = x;
-//    my = y;
-//    
-//    Whiteboard::handle(x, y) {
-//        points.push_back(new Point(x, y));
-//    } // store into points deque
-//    
-//    // Redraw the scene
-//    redraw();
-//}
 
 Whiteboard::~Whiteboard() {
     //Point::~Point() {

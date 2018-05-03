@@ -1,20 +1,9 @@
-//
-//  App.hpp
-//  glutapp
-//
-//  Created by Jonathan Moran on 4/25/18.
-//  Copyright © 2018 Angelo Kyrilov. All rights reserved.
-//
-
 #ifndef App_hpp
 #define App_hpp
 
-#include <stdio.h>
-//#include "app_main.cpp"
-//#include "glutapp"
-//#include <GL/glutapp.h>
 #include "GlutApp.h"
-//#include <GL/freeglut.h>
+#include "Point.h"
+#include "TexRect.hpp"
 #include <deque>
 
 class App: public GlutApp {
@@ -31,6 +20,14 @@ public:
     void keyPress(unsigned char key);
     void mouseDown(float x, float y);
     void mouseDrag(float x, float y);
+    
+    TexRect* toolbar;
+    
+    std::deque<Point*> points;
+    
+    TexRect* pencilSelect;
+    
+    bool pencilSelected;
 };
 
 #endif /* App_hpp */
