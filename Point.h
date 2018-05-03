@@ -24,9 +24,22 @@ struct Point {
 //public:
     Point ();
     // A constructor for point
+    Point (float x, float y);
     Point(float x, float y, float r, float g, float b);
     
     virtual void draw() const;
+    
+    float getX();
+    float getY();
+    float getR();
+    float getG();
+    float getB();
+    
+    void setX();
+    void setY();
+    void setR();
+    void setG();
+    void setB();
     
     void handle(float x, float y);
     void keyPress(unsigned char key);

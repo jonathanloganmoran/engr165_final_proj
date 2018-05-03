@@ -11,6 +11,7 @@
 //#include "GlutApp.h"
 //#include "freeglut/freeglut.h"
 //#include "Whiteboard.hpp"
+//#include "../images/toolbar.png"
 #include <deque>
 
 using namespace std;

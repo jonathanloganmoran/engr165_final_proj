@@ -9,11 +9,24 @@
 #include "Whiteboard.hpp"
 //#include "GlutApp.h"
 #include "Point.h"
+#include "Rectangle.h"
 #include <deque>
+
+using namespace std;
 
 Whiteboard::Whiteboard() {
     Point* p;
     deque<Point*> points;
+    
+    Sticker *s;
+    deque<Sticker*> stickers;
+    
+    Rectangle *v;
+    deque<Rectangle*> rectangles;
+    deque<Rectangle*> toolbar_objects;                  // to store each toolbar element
+    
+  //  Cross *x;                                         // TO BE IMPLEMENTED -- Week 3 goals
+ //   deque<Cross*> crosses;
 }
 
 

@@ -26,7 +26,6 @@ public:
     std::deque<Point*> points;
     
     TexRect* pencilSelect;
-    
     bool pencilSelected;
 };
 
