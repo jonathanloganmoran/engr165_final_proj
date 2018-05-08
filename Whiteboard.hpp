@@ -5,7 +5,7 @@
 //  Created by Jonathan Moran on 4/25/18.
 //  Copyright © 2018 Angelo Kyrilov. All rights reserved.
 //
-
+/*
 #ifndef Whiteboard_hpp
 #define Whiteboard_hpp
 
@@ -31,5 +31,5 @@ public:
     
     ~Whiteboard();
 };
-
-#endif /* Whiteboard_hpp */
+*/
+//#endif /* Whiteboard_hpp */

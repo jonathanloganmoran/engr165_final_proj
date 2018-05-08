@@ -4,12 +4,19 @@
 #include "GlutApp.h"
 #include "Point.h"
 #include "TexRect.hpp"
+#include "TexSelect.hpp"
+#include "Circle.h"
 #include <deque>
+#include <math.h>
 
 class App: public GlutApp {
     // Maintain app state here
     float mx;
     float my;
+    
+    float r;
+    float g;
+    float b;
     
 public:
     // Constructor, to initialize state
@@ -24,10 +31,40 @@ public:
     TexRect* toolbar;
     
     std::deque<Point*> points;
+
+    TexSelect* pencilSelect;
+    TexSelect* eraserSelect;
+    TexSelect* squareSelect;
+    TexSelect* circleSelect;
+    TexSelect* crossSelect;
+    TexSelect* blueSelect;
+    TexSelect* greenSelect;
+    TexSelect* orangeSelect;
+    TexSelect* redSelect;
+    TexSelect* yellowSelect;
+    TexSelect* purpleSelect;
+    TexSelect* whiteSelect;
+    TexSelect* blackSelect;
     
-    TexRect* pencilSelect;
-    
+
     bool pencilSelected;
+    bool eraserSelected;
+    bool squareSelected;
+    bool circleSelected;
+    bool crossSelected;
+    
+    bool redSelected;
+    bool greenSelected;
+    bool orangeSelected;
+    bool blueSelected;
+    bool yellowSelected;
+    bool purpleSelected;
+    bool whiteSelected;
+    bool blackSelected;
+
+    
+    bool circleTool;
+    
 };
 
 #endif /* App_hpp */

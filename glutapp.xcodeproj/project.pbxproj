@@ -10,9 +10,12 @@
 		173FEF0C1AA63AC4006CCB85 /* app_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 173FEF0B1AA63AC4006CCB85 /* app_main.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		173FEF161AA63B1B006CCB85 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173FEF151AA63B1B006CCB85 /* OpenGL.framework */; };
 		173FEF181AA63B22006CCB85 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173FEF171AA63B22006CCB85 /* GLUT.framework */; };
+		20885E85209CEB070075EA1E /* TexSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20885E83209CEB070075EA1E /* TexSelect.cpp */; };
 		20B5A899209961CA00ABBC1F /* TexRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 20B5A897209961CA00ABBC1F /* TexRect.cpp */; };
 		20B9AE61209A46FD006525BE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9AE60209A46FD006525BE /* CoreFoundation.framework */; };
 		20B9AE63209A4759006525BE /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B9AE62209A4759006525BE /* libSOIL.a */; };
+		F2961F2B209A94A600C5135A /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2961F29209A94A600C5135A /* Rectangle.cpp */; };
+		F2961F2E209A9C5F00C5135A /* Circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2961F2C209A9C5F00C5135A /* Circle.cpp */; };
 		F2CCF7392091127E00D2BD0A /* Point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF7372091127E00D2BD0A /* Point.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		F2CCF73C20911A2900D2BD0A /* App.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF73A20911A2900D2BD0A /* App.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		F2CCF73F20911F5100D2BD0A /* GlutApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2CCF73E20911F5100D2BD0A /* GlutApp.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
@@ -37,10 +40,16 @@
 		173FEF0B1AA63AC4006CCB85 /* app_main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = app_main.cpp; sourceTree = "<group>"; };
 		173FEF151AA63B1B006CCB85 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		173FEF171AA63B22006CCB85 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		20885E83209CEB070075EA1E /* TexSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TexSelect.cpp; sourceTree = "<group>"; };
+		20885E84209CEB070075EA1E /* TexSelect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TexSelect.hpp; sourceTree = "<group>"; };
 		20B5A897209961CA00ABBC1F /* TexRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TexRect.cpp; sourceTree = "<group>"; };
 		20B5A898209961CA00ABBC1F /* TexRect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TexRect.hpp; sourceTree = "<group>"; };
 		20B9AE60209A46FD006525BE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		20B9AE62209A4759006525BE /* libSOIL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSOIL.a; path = SOIL/lib/macOS/libSOIL.a; sourceTree = "<group>"; };
+		F2961F29209A94A600C5135A /* Rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rectangle.cpp; sourceTree = "<group>"; };
+		F2961F2A209A94A600C5135A /* Rectangle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rectangle.h; sourceTree = "<group>"; };
+		F2961F2C209A9C5F00C5135A /* Circle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Circle.cpp; sourceTree = "<group>"; };
+		F2961F2D209A9C5F00C5135A /* Circle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
 		F2CCF7372091127E00D2BD0A /* Point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = "<group>"; };
 		F2CCF7382091127E00D2BD0A /* Point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = SOURCE_ROOT; };
 		F2CCF73A20911A2900D2BD0A /* App.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = App.cpp; sourceTree = "<group>"; };
@@ -72,17 +81,23 @@
 			isa = PBXGroup;
 			children = (
 				F2CCF74320912AC000D2BD0A /* Sticker.cpp */,
+				F2CCF74420912AC000D2BD0A /* Sticker.hpp */,
 				20B5A897209961CA00ABBC1F /* TexRect.cpp */,
 				20B5A898209961CA00ABBC1F /* TexRect.hpp */,
-				F2CCF74420912AC000D2BD0A /* Sticker.hpp */,
 				F2CCF7402091206100D2BD0A /* Whiteboard.cpp */,
 				F2CCF7412091206100D2BD0A /* Whiteboard.hpp */,
+				F2961F2C209A9C5F00C5135A /* Circle.cpp */,
+				F2961F2D209A9C5F00C5135A /* Circle.h */,
+				F2961F29209A94A600C5135A /* Rectangle.cpp */,
+				F2961F2A209A94A600C5135A /* Rectangle.h */,
 				F2CCF73E20911F5100D2BD0A /* GlutApp.cpp */,
 				F2CCF73D20911F5100D2BD0A /* GlutApp.h */,
 				F2CCF73A20911A2900D2BD0A /* App.cpp */,
 				F2CCF73B20911A2900D2BD0A /* App.h */,
 				F2CCF7372091127E00D2BD0A /* Point.cpp */,
 				F2CCF7382091127E00D2BD0A /* Point.h */,
+				20885E83209CEB070075EA1E /* TexSelect.cpp */,
+				20885E84209CEB070075EA1E /* TexSelect.hpp */,
 				173FEF171AA63B22006CCB85 /* GLUT.framework */,
 				173FEF151AA63B1B006CCB85 /* OpenGL.framework */,
 				173FEF0B1AA63AC4006CCB85 /* app_main.cpp */,
@@ -165,8 +180,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2CCF73C20911A2900D2BD0A /* App.cpp in Sources */,
+				F2961F2E209A9C5F00C5135A /* Circle.cpp in Sources */,
 				F2CCF73F20911F5100D2BD0A /* GlutApp.cpp in Sources */,
+				20885E85209CEB070075EA1E /* TexSelect.cpp in Sources */,
 				F2CCF7392091127E00D2BD0A /* Point.cpp in Sources */,
+				F2961F2B209A94A600C5135A /* Rectangle.cpp in Sources */,
 				F2CCF74520912AC000D2BD0A /* Sticker.cpp in Sources */,
 				173FEF0C1AA63AC4006CCB85 /* app_main.cpp in Sources */,
 				F2CCF7422091206100D2BD0A /* Whiteboard.cpp in Sources */,
