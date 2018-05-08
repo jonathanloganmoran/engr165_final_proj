@@ -1,4 +1,4 @@
-#include "Rectangle.h"
+/*#include "Rectangle.h"
 #include "Point.h"
 
 Rectangle::Rectangle() : Point(mx, my) {        // want to render Rectangle instance at (mx, my)
@@ -42,3 +42,4 @@ Rectangle::bool contains(Rectangle* v) {
     }
     return false;
 }
+*/

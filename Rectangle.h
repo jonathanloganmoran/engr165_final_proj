@@ -5,7 +5,7 @@
 //  Created by Jonathan Moran on 5/2/18.
 //  Copyright © 2018 Angelo Kyrilov. All rights reserved.
 //
-
+/*
 #ifndef Rectangle_h
 #define Rectangle_h
 
@@ -23,5 +23,5 @@ public:
     
     void setH();
     void setW();
-};
-#endif /* Rectangle_h */
+};*/
+//#endif /* Rectangle_h */

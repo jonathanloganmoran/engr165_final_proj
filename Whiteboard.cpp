@@ -1,4 +1,4 @@
-//
+/*//
 //  Whiteboard.cpp
 //  glutapp
 //
@@ -48,4 +48,4 @@ void Whiteboard::draw() {
     for(int i = 0; i < points.size(); i++) {
         (points[i])->draw();
     }
-}
+}*/

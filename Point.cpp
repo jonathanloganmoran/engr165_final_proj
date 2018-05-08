@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Whiteboard *board;
+//Whiteboard *board;
 
 Point::Point() {
     x = 0;
@@ -24,6 +24,12 @@ Point::Point(float x, float y) {        // instantiate point with default RGB = 
 Point::Point(float x, float y, float r, float g, float b) {
     this->x = x;
     this->y = y;
+    this->r = r;
+    this->g = g;
+    this->b = b;
+}
+
+Point::Point(float r, float g, float b){
     this->r = r;
     this->g = g;
     this->b = b;

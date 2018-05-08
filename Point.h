@@ -24,8 +24,9 @@ struct Point {
 //public:
     Point ();
     // A constructor for point
-    Point (float x, float y);
-    Point(float x, float y, float r, float g, float b);
+    Point (float, float);
+    Point(float, float, float, float, float);
+    Point(float, float, float);
     
     virtual void draw() const;
     

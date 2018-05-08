@@ -1,4 +1,35 @@
-//
+#ifndef Circle_h
+#define Circle_h
+
+#include "Point.h"
+
+class Circle : public Point {
+    float radius;
+    
+public:
+    Circle();
+    Circle(float, float, float);
+    Circle(float, float, float, float, float, float);
+    
+    float getRadius() const;
+    float getX() const;
+    float getY() const;
+    
+    void setRadius(float);
+    void setX(float);
+    void setY(float);
+    
+    void draw() const;
+};
+
+#endif
+
+
+
+
+
+
+/*//
 //  Circle.hpp
 //  glutapp
 //
@@ -26,5 +57,5 @@ public:
     float getRadius();
     
 };
-
-#endif /* Circle_hpp */
+*/
+//#endif /* Circle_hpp */
