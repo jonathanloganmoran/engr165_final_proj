@@ -29,6 +29,7 @@ public:
     void mouseDrag(float x, float y);
     
     TexRect* toolbar;
+    TexRect* thicknessBar;
     
     std::deque<Point*> points;
 
@@ -45,6 +46,10 @@ public:
     TexSelect* purpleSelect;
     TexSelect* whiteSelect;
     TexSelect* blackSelect;
+    TexSelect* thickSelect;
+    TexSelect* mediumSelect;
+    TexSelect* smallSelect;
+    TexSelect* tinySelect;
     
 
     bool pencilSelected;
@@ -63,7 +68,10 @@ public:
     bool blackSelected;
 
     
-    bool circleTool;
+    bool thickSelected;
+    bool mediumSelected;
+    bool smallSelected;
+    bool tinySelected;
     
 };
 

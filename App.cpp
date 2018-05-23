@@ -18,6 +18,8 @@ App::App(const char* label, int x, int y, int w, int h){
     my = 0.0;
     
     toolbar = new TexRect("images/toolbar.png", -1, 1, 0.252, 1.2);
+    thicknessBar = new TexRect("images/thiccness.png", -1, -0.19, 0.252, .26);
+    
     pencilSelect = new TexSelect("", -1, 1, 0.252, 0.2);
     eraserSelect = new TexSelect("", -1, 0.8, 0.252, 0.13); //edit the 2nd float
     squareSelect = new TexSelect("", -1, 0.651, 0.252, 0.13);
@@ -32,6 +34,11 @@ App::App(const char* label, int x, int y, int w, int h){
     purpleSelect = new TexSelect("", -0.886, 0.015, 0.141, 0.1);
     whiteSelect = new TexSelect("", -1, -0.09, 0.131, 0.105);
     blackSelect = new TexSelect("", -0.886, -0.09, 0.140, 0.105);
+    
+    thickSelect = new TexSelect("", -1, -0.2, 0.252, 0.075);
+    mediumSelect = new TexSelect("", -1, -0.279, 0.252, 0.057);
+    smallSelect = new TexSelect("", -1, -0.34, 0.252, 0.045);
+    tinySelect = new TexSelect("", -1, -0.399, 0.252, 0.032);
     
     
     
@@ -49,6 +56,9 @@ App::App(const char* label, int x, int y, int w, int h){
     purpleSelected = false;
     whiteSelected = false;
     blackSelected = false;
+    
+    thickSelected = true;
+    mediumSelected = false;
     
     r = 1.0;
     g = 0;
@@ -71,7 +81,7 @@ void App::draw() {
     
     
     
-    glPointSize(20);
+    //glPointSize(20);
     
     for (std::deque<Point*>::iterator i = points.begin(); i != points.end(); i++) {
         //points[i]->draw();
@@ -89,6 +99,27 @@ void App::draw() {
     }
     
     toolbar->draw();
+    thicknessBar->draw();
+    
+    if (thickSelected){
+        thickSelect->draw();
+         glPointSize(20);
+    }
+    
+    if (mediumSelected){
+        mediumSelect->draw();
+         glPointSize(10);
+    }
+    
+    if (smallSelected){
+        smallSelect->draw();
+         glPointSize(5);
+    }
+    
+    if (tinySelected){
+        tinySelect->draw();
+         glPointSize(1);
+    }
     
     if (pencilSelected){
         pencilSelect->draw();
@@ -104,7 +135,6 @@ void App::draw() {
     
     if (circleSelected){
         circleSelect->draw();
-        circleTool = true;
     }
     
     if (crossSelected){
@@ -150,6 +180,8 @@ void App::draw() {
         blackSelect->drawWhite();
         pencilSelect->draw();
     }
+
+    
     
     
     // We have been drawing everything to the back buffer
@@ -171,7 +203,7 @@ void App::mouseDown(float x, float y) {
         circleTool = true;
     }*/
     
-    if (toolbar->contains(mx,my)){
+    if (toolbar->contains(mx,my) || thicknessBar->contains(mx, my)){
         
         //make selection on pencil
         if (pencilSelect->contains(mx, my)){
@@ -305,6 +337,42 @@ void App::mouseDown(float x, float y) {
             blackSelected = false;
             
         }
+        
+        if (thickSelect->contains(mx,my)){
+            thickSelected = true;
+           // glPointSize(20);
+        }
+        else {
+            thickSelected = false;
+        
+        }
+        
+        if (mediumSelect->contains(mx,my)){
+            mediumSelected = true;
+          //  glPointSize(10);
+        }
+        else {
+            mediumSelected = false;
+            
+        }
+        
+        if (smallSelect->contains(mx,my)){
+            smallSelected = true;
+           // glPointSize(5);
+        }
+        else {
+            smallSelected = false;
+            
+        }
+        
+        if (tinySelect->contains(mx,my)){
+            tinySelected = true;
+           // glPointSize(1);
+        }
+        else {
+            tinySelected = false;
+            
+        }
 
         
     }
@@ -339,7 +407,7 @@ void App::mouseDrag(float x, float y){
     //points.push_back(new Point(mx, my, 1, 0, 0));
     
     
-    if (toolbar->contains(mx,my)){
+    if (toolbar->contains(mx,my) || thicknessBar->contains(mx, my)){
         //don't draw points
     }
     else {
