@@ -2,6 +2,8 @@
 
 #include <deque>
 #include "Whiteboard.hpp"
+#include <math.h>
+
 
 using namespace std;
 
@@ -74,6 +76,8 @@ void Point::draw() const {
     glVertex2f(x, y);
     glEnd();
 }
+
+
 
 Point::~Point(){
     

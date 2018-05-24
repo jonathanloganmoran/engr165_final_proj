@@ -5,7 +5,7 @@
 #include "Point.h"
 #include "TexRect.hpp"
 #include "TexSelect.hpp"
-#include "Circle.h"
+#include "Whiteboard.hpp"
 #include <deque>
 #include <math.h>
 
@@ -28,50 +28,16 @@ public:
     void mouseDown(float x, float y);
     void mouseDrag(float x, float y);
     
-    TexRect* toolbar;
-    TexRect* thicknessBar;
+    Whiteboard* whiteboard;
+    
+
+   // TexRect* thicknessBar;
     
     std::deque<Point*> points;
 
-    TexSelect* pencilSelect;
-    TexSelect* eraserSelect;
-    TexSelect* squareSelect;
-    TexSelect* circleSelect;
-    TexSelect* crossSelect;
-    TexSelect* blueSelect;
-    TexSelect* greenSelect;
-    TexSelect* orangeSelect;
-    TexSelect* redSelect;
-    TexSelect* yellowSelect;
-    TexSelect* purpleSelect;
-    TexSelect* whiteSelect;
-    TexSelect* blackSelect;
-    TexSelect* thickSelect;
-    TexSelect* mediumSelect;
-    TexSelect* smallSelect;
-    TexSelect* tinySelect;
-    
 
-    bool pencilSelected;
-    bool eraserSelected;
-    bool squareSelected;
-    bool circleSelected;
-    bool crossSelected;
-    
-    bool redSelected;
-    bool greenSelected;
-    bool orangeSelected;
-    bool blueSelected;
-    bool yellowSelected;
-    bool purpleSelected;
-    bool whiteSelected;
-    bool blackSelected;
 
-    
-    bool thickSelected;
-    bool mediumSelected;
-    bool smallSelected;
-    bool tinySelected;
+
     
 };
 
